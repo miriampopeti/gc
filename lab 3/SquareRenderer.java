@@ -37,7 +37,7 @@ public class SquareRenderer
                 -3.0f
         );
 
-        mTransY += 0.075f;
+        mTransY += 0.3f;
 
         gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
 
@@ -76,14 +76,14 @@ public class SquareRenderer
             GL10 gl,
             EGLConfig config) {
 
-        gl.glDisable(GL10.GL_DITHER);
+        //gl.glDisable(GL10.GL_DITHER);
 
         gl.glHint(
                 GL10.GL_PERSPECTIVE_CORRECTION_HINT,
                 GL10.GL_FASTEST
         );
 
-        gl.glClearColor(0,0,0,0);
+        gl.glClearColor(1,0,0,1);
 
         gl.glEnable(GL10.GL_CULL_FACE);
 

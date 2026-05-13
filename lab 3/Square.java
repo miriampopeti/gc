@@ -16,7 +16,7 @@ public class Square {
     public Square() {
 
         float vertices[] = {
-                -1.0f, -1.0f,
+                -2.0f, -1.0f,
                 1.0f, -1.0f,
                 -1.0f,  1.0f,
                 1.0f,  1.0f
@@ -25,10 +25,10 @@ public class Square {
         byte maxColor = (byte)255;
 
         byte colors[] = {
-                0, 0, 0, maxColor,
-                maxColor, 0, 0, maxColor,
-                0, 0, 0, maxColor,
-                maxColor, 0, 0, maxColor,
+                0, 0, (byte)255, (byte)255,
+                0, 0, (byte)255, (byte)255,
+                0, 0, (byte)255, (byte)255,
+                0, 0, (byte)255, (byte)255
         };
 
         byte indices[] = {
@@ -81,7 +81,7 @@ public class Square {
         );
 
         gl.glDrawElements(
-                GL11.GL_TRIANGLES,
+                GL11.GL_TRIANGLE_FAN,
                 6,
                 GL11.GL_UNSIGNED_BYTE,
                 mIndexBuffer
